@@ -23,10 +23,10 @@ $(OBJS_DIR)/%.o: %.cpp | $(OBJS_DIR)
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 # Pattern rules for util
-$(OBJS_DIR)/%.o: util/%.cpp | $(OBJS_DIR)
+$(OBJS_DIR)/%.o: util | $(OBJS_DIR)
 	$(CXX) $(CXXFLAGS) $< -o $@
 
-$(OBJS_DIR)/%.o: util/lodepng/%.cpp | $(OBJS_DIR)
+$(OBJS_DIR)/%.o: util | $(OBJS_DIR)
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 # Create directories
