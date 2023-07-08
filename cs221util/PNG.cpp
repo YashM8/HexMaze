@@ -78,20 +78,20 @@ namespace cs221util {
 
     RGBAPixel* PNG::getPixel(unsigned int x, unsigned int y) {
         if (width_ == 0 || height_ == 0) {
-            cerr << "ERROR: Call to cs221util::PNG::getPixel() made on an image with no pixels." << endl;
+            cerr << "ERROR: Call to util::PNG::getPixel() made on an image with no pixels." << endl;
             cerr << "     : Returning nullptr." << endl;
             return nullptr;
         }
 
         if (x >= width_) {
-            cerr << "WARNING: Call to cs221util::PNG::getPixel(" << x << "," << y << ") tries to access x=" << x
+            cerr << "WARNING: Call to util::PNG::getPixel(" << x << "," << y << ") tries to access x=" << x
                  << ", which is outside of the image (image width: " << width_ << ")." << endl;
             cerr << "       : Truncating x to " << (width_ - 1) << endl;
             x = width_ - 1;
         }
 
         if (y >= height_) {
-            cerr << "WARNING: Call to cs221util::PNG::getPixel(" << x << "," << y << ") tries to access y=" << y
+            cerr << "WARNING: Call to util::PNG::getPixel(" << x << "," << y << ") tries to access y=" << y
                  << ", which is outside of the image (image height: " << height_ << ")." << endl;
             cerr << "       : Truncating y to " << (height_ - 1) << endl;
             y = height_ - 1;

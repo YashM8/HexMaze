@@ -22,11 +22,11 @@ all: $(EXE) $(EXETESTSQ) $(EXETESTMAZE)
 $(OBJS_DIR)/%.o: %.cpp | $(OBJS_DIR)
 	$(CXX) $(CXXFLAGS) $< -o $@
 
-# Pattern rules for cs221util
-$(OBJS_DIR)/%.o: cs221util/%.cpp | $(OBJS_DIR)
+# Pattern rules for util
+$(OBJS_DIR)/%.o: util/%.cpp | $(OBJS_DIR)
 	$(CXX) $(CXXFLAGS) $< -o $@
 
-$(OBJS_DIR)/%.o: cs221util/lodepng/%.cpp | $(OBJS_DIR)
+$(OBJS_DIR)/%.o: util/lodepng/%.cpp | $(OBJS_DIR)
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 # Create directories
