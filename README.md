@@ -1,3 +1,3 @@
 # HexMaze
 
-Generates and solves a maze using DFS.
+Generates a maze using HexCells and solves the maze using Depth First Search.
